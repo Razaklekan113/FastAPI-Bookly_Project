@@ -63,11 +63,15 @@ books_data = [
 
 
 @app.get("/books")
-async def get_all_books():
+async def get_all_books() -> dict:
     pass
 
 @app.post("/books")
-async def create_a_book():
+async def create_a_book() -> dict:
+    pass
+
+@app.post("/books/{book_id}")
+async def get_a_book(book_id:int) -> dict:
     pass
 
 # @app.get("/")
