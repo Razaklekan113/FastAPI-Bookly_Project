@@ -4,7 +4,7 @@ from pydantic import BaseModel
 
 app = FastAPI()
 
-books_data = [
+books = [
     {
         "id": 1,
         "title": "The Great Gatsby",
@@ -63,8 +63,8 @@ books_data = [
 
 
 @app.get("/books")
-async def get_all_books() -> dict:
-    pass
+async def get_all_books():
+    return books
 
 @app.post("/books")
 async def create_a_book() -> dict:
@@ -74,38 +74,10 @@ async def create_a_book() -> dict:
 async def get_a_book(book_id:int) -> dict:
     pass
 
-# @app.get("/")
-# async def read_root():
-#     return {"message": "Hello, World!"}
+@app.post("/books/{book_id}")
+async def update_book(book_id:int) -> dict:
+    pass
 
-# @app.get("/greet")
-# async def greet_name(name: Optional[str] = "User", age: int = 0) -> dict:
-#     return {"message": f"Hello {name}", "age": age}
-
-# class BookCreateModel(BaseModel):
-#     title: str
-#     author: str
-
-
-# @app.post("/create_book")
-# async def create_book(book_data:BookCreateModel):
-#     return {
-#         "title": book_data.title,
-#         "author": book_data.author
-#     }
-
-# @app.get("/get_headers", status_code=200)
-# async def get_headers(
-#     accept: str = Header(None),
-#     content_type: str = Header(None),
-#     user_agent: str = Header(None),
-#     host: str = Header(None)
-# ):
-#     request_headers = {}
-
-#     request_headers["Accept"] = accept
-#     request_headers["CONTENT-TYPE"] = content_type
-#     request_headers["User-Agent"] = user_agent
-#     request_headers["Host"] = host
-
-#     return request_headers
+@app.post("/books/{book_id}")
+async def delete_book(book_id:int) -> dict:
+    pass
