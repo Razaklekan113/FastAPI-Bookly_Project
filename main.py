@@ -61,8 +61,17 @@ books = [
     }
 ]
 
+class Book(BaseModel):
+        id: int
+        title: str
+        author: str
+        publisher:str
+        published_date: str
+        page_count: int
+        language: str
 
-@app.get("/books")
+
+@app.get("/books", response_models=Book)
 async def get_all_books():
     return books
 
