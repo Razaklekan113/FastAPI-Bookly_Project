@@ -57,6 +57,16 @@ books = [
         "publisher": "T. Egerton, Whitehall",
         "published_date": "1813-01-28",
         "page_count": 432,
+        "language": "English",
+    },
+
+    {
+        "id": 7,
+        "title": "Pride",
+        "author": "Austen",
+        "publisher": "T. Egerton, Whitehall",
+        "published_date": "1813-01-28",
+        "page_count": 472,
         "language": "English"
     }
 ]
