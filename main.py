@@ -1,6 +1,7 @@
 from fastapi import FastAPI, Header
 from typing import Optional
 from pydantic import BaseModel
+from typing import List
 
 app = FastAPI()
 
@@ -72,7 +73,7 @@ class Book(BaseModel):
         language: str
 
 
-@app.get("/books", response_models=Book)
+@app.get("/books", response_model=List[Book])
 async def get_all_books():
     return books
 
