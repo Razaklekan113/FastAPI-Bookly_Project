@@ -79,7 +79,7 @@ async def get_all_books():
 
 @app.post("/books", status_code=status.HTTP_201_CREATED)
 async def create_a_book(book_data:Book) -> dict:
-    new_book = book_data.model_dump
+    new_book = book_data.model_dump()
 
     books.append(new_book)
 
