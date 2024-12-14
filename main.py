@@ -1,4 +1,4 @@
-from fastapi import FastAPI, Header
+from fastapi import FastAPI, Header, status
 from typing import Optional
 from pydantic import BaseModel
 from typing import List
@@ -77,9 +77,13 @@ class Book(BaseModel):
 async def get_all_books():
     return books
 
-@app.post("/books")
-async def create_a_book() -> dict:
-    pass
+@app.post("/books", status_code=status.HTTP_201_CREATED)
+async def create_a_book(book_data:Book) -> dict:
+    new_book = book_data.model_dump
+
+    books.append(new_book)
+
+    return new_book
 
 @app.post("/books/{book_id}")
 async def get_a_book(book_id:int) -> dict:
