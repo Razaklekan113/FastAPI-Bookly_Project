@@ -51,15 +51,6 @@ books = [
         "page_count": 214,
         "language": "English"
     },
-    {
-        "id": 6,
-        "title": "Pride and Prejudice",
-        "author": "Jane Austen",
-        "publisher": "T. Egerton, Whitehall",
-        "published_date": "1813-01-28",
-        "page_count": 432,
-        "language": "English",
-    }
 
 ]
 
