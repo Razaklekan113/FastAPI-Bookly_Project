@@ -1,7 +1,7 @@
 from fastapi import FastAPI, Header, status
 from fastapi.exceptions import HTTPException
 from typing import List
-from .book_data import books
+from .src.books.book_data import books
 from .schemas import Book, BookUpdateModel
 
 app = FastAPI()
