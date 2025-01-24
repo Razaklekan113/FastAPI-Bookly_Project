@@ -52,6 +52,18 @@ books = [
         "published_date": "1813-01-28",
         "page_count": 432,
         "language": "English",
+    },
+
+    {
+        "id": 7,
+        "title": "Prejudice",
+        "author": "Jane Austen",
+        "publisher": "T. Egerton, Whitehall",
+        "published_date": "1813-01-28",
+        "page_count": 532,
+        "language": "English",
     }
+
+    
 
 ]
